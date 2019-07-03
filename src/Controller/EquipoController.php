@@ -40,7 +40,6 @@ class EquipoController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $equipo = $form->getData();
-            dd($equipo);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($equipo);
             $entityManager->flush();
